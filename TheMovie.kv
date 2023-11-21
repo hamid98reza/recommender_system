@@ -1,0 +1,169 @@
+#:kivy 2.2.1
+PagelayoutExample:
+
+<PagelayoutExample>
+    ScrollviewExample:
+    GridlayoutExample:
+
+
+<GridlayoutExample>:
+    canvas.before:
+        Color:
+            # rgba: 0,1,0,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: r"netflix.jpeg"
+    rows:7
+    cols:2   #⚠️ check the number
+
+
+    TextInput:
+        id: one  #⚠️⚠️⚠️
+        multiline:False
+        text: root.input1
+        size_hint:None,None
+        size: "600dp","30dp"
+        pos_hint:{"x":None,'y':None}
+        pos:"40dp","40dp"
+        on_text_validate: root.on_text_validation1(self)
+
+    Button:
+        text: 'confirm1'
+        size_hint: None, None
+        size: "70dp","40dp"
+        pos_hint:{"x":None,"y":None}
+        pos: '100dp','100dp'
+        on_press: root.callback(self)
+
+    TextInput:
+        id: two
+        multiline:False
+        text: root.input2
+        size_hint:None,None
+        size: "600dp","30dp"
+        pos_hint:{"x":None,'y':None}
+        pos:"40dp","40dp"
+        on_text_validate: root.on_text_validation2(self)
+
+    Button:
+
+        text: 'confirm2'
+        background_color:1,0,0,1
+        size_hint: None, None
+        size: "70dp","40dp"
+        pos_hint:{"x":None,"y":None}
+        pos: '100dp','100dp'
+
+    TextInput:
+        id: two
+        multiline:False
+        text:root.input3
+        size_hint:None,None
+        size: "600dp","30dp"
+        pos_hint:{"x":None,'y':None}
+        pos:"40dp","40dp"
+        on_text_validate: root.on_text_validation3(self)
+
+    Button:
+
+        text: 'confirm3'
+        disabled:True
+        background_color:1,0,0,1
+        size_hint: None, None
+        size: "70dp","40dp"
+        pos_hint:{"x":None,"y":None}
+        pos: '100dp','100dp'
+
+    TextInput:
+        id: two
+        multiline:False
+        text: root.input4
+        size_hint:None,None
+        size: "600dp","30dp"
+        pos_hint:{"x":None,'y':None}
+        pos:"40dp","40dp"
+        on_text_validate: root.on_text_validation4(self)
+
+    Button:
+
+        text: 'confirm4'
+        disabled:True
+        background_color:1,0,0,1
+        size_hint: None, None
+        size: "70dp","40dp"
+        pos_hint:{"x":None,"y":None}
+        pos: '100dp','100dp'
+
+    TextInput:
+        id: two
+        multiline:False
+        text: root.input5
+        size_hint:None,None
+        size: "600dp","30dp"
+        pos_hint:{"x":None,'y':None}
+        pos:"40dp","40dp"
+        on_text_validate: root.on_text_validation5(self)
+
+    Button:
+
+        text: 'confirm5'
+        disabled:True
+        background_color:1,0,0,1
+        size_hint: None, None
+        size: "70dp","40dp"
+        pos_hint:{"x":None,"y":None}
+        pos: '100dp','100dp'
+
+    TextInput:
+        id: two
+        multiline:False
+        text: root.input6
+        size_hint:None,None
+        size: "600dp","30dp"
+        pos_hint:{"x":None,'y':None}
+        pos:"40dp","40dp"
+        on_text_validate: root.on_text_validation6(self)
+
+    Button:
+        text:'confirm6'
+        disabled:True
+        
+        background_color:1,0,0,1
+        size_hint: None, None
+        size: "70dp","40dp"
+        pos_hint:{"x":None,"y":None}
+        pos: '100dp','100dp'
+        
+
+    Label:
+        text: root.content                 #number.text
+        font: "Lcd light.ttf"
+        font_size: "20dp"
+        multiline:True
+        size_hint:1,0.5
+        # size: "300dp","300dp"
+        pos_hint:{"x":0,'y':0}
+        
+
+        
+
+
+
+<BoxlayoutExample>:
+
+
+
+
+<ScrollviewExample>:
+    StacklayoutExample:
+        size_hint: 1,None
+        height: self.minimum_height
+
+
+
+<StacklayoutExample>:
+
+
+
+
